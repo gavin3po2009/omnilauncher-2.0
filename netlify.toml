@@ -1,0 +1,17 @@
+[build]
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/api/auth/*"
+  to = "/.netlify/functions/auth/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/api/apps/*"
+  to = "/.netlify/functions/apps/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/api/apps"
+  to = "/.netlify/functions/apps"
+  status = 200
